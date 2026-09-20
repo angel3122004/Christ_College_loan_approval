@@ -3,11 +3,14 @@ import joblib
 import pandas as pd
 
 
+
 model = joblib.load("loan_approval_decision_tree.pkl")
+
 
 
 st.title("Loan Approval Prediction")
 st.subheader("Decision Tree")
+
 
 
 income = st.number_input(
@@ -24,12 +27,13 @@ max_value=900,
 value=720
 )
 
-if st.button("Predict Loan Approval"):
 
+if st.button("Predict Loan Approval"):
 new_applicant = pd.DataFrame({
-    "Income": [income],
-    "Credit_Score": [credit_score]
+"Income": [income],
+"Credit_Score": [credit_score]
 })
+
 
 prediction = model.predict(new_applicant)
 
