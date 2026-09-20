@@ -47,4 +47,3 @@ if prediction[0] == "YES":
     st.success("Prediction: LOAN APPROVED")
 else:
     st.error("Prediction: LOAN NOT APPROVED")
-```
